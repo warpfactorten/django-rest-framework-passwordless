@@ -1,5 +1,15 @@
 ![ci-image]
 
+This fork
+==============
+
+What this fork does differently:
+- it deletes inactive callback tokens
+- it allows to create a username for a new user
+
+Original README text:
+==============
+
 drfpasswordless is a quick way to integrate ‘passwordless’ auth into
 your Django Rest Framework project using a user’s email address or
 mobile number only (herein referred to as an alias).

@@ -46,6 +46,8 @@ class AbstractBaseAliasAuthenticationSerializer(serializers.Serializer):
                     **{self.alias_type: alias})
 
                 if user_created:
+                    if api_settings.PASSWORDLESS_USER_USERNAME == 'alias':
+                        user.username = alias
                     user.set_unusable_password()
                     user.save()
             else:

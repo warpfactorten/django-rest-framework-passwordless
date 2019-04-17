@@ -25,6 +25,9 @@ def invalidate_previous_tokens(sender, instance, **kwargs):
             token.is_active = False
             token.save()
 
+    # Delete inactive tokens
+    if api_settings.PASSWORDLESS_DELETE_INACTIVE_CALLBACK_TOKENS:
+        CallbackToken.objects.filter(is_active=False).delete()
 
 @receiver(signals.pre_save, sender=CallbackToken)
 def check_unique_tokens(sender, instance, **kwargs):

@@ -69,6 +69,12 @@ DEFAULTS = {
     # Automatically send verification email or sms when a user changes their alias.
     'PASSWORDLESS_AUTO_SEND_VERIFICATION_TOKEN': False,
 
+    # The user's username. Right now the only alternative to None is 'alias' which will set email or mobile number as the username.
+    'PASSWORDLESS_USER_USERNAME': None,
+
+    # Keep inactive callback tokens in database.
+    'PASSWORDLESS_DELETE_INACTIVE_CALLBACK_TOKENS': False,
+
 }
 
 # List of settings that may be in string import notation.
