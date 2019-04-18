@@ -5,7 +5,7 @@ This fork
 
 What this fork does differently:
 - it deletes inactive callback tokens
-- it allows to create a username for a new user
+- it allows to create a username out of email address or mobile number
 
 Original README text:
 ==============
